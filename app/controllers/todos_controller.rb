@@ -7,4 +7,10 @@ class TodosController < ApplicationController
 	def new
 		render :new
 	end
+
+	def create
+		new_todo = params.require(:todo).permit(:description)
+		Todo.create(new_todo)
+		redirect_to '/todos'
+	end
 end
