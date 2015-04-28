@@ -5,6 +5,7 @@ class TodosController < ApplicationController
 	end
 
 	def new
+		@todo = Todo.new
 		render :new
 	end
 
