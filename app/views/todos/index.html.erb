@@ -5,6 +5,10 @@
 	<title>index</title>
 </head>
 <body>
-	
+	<% @todos.each do |todo| %>
+		<div>
+			To-Do Description: <%= todo.description %>	
+		</div>
+	<% end %>	
 </body>
 </html>
