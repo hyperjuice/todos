@@ -10,5 +10,12 @@
 			To-Do Description: <%= todo.description %>	
 		</div>
 	<% end %>	
+
+	<br>
+
+	<%= form_for :todo, url: '/todos', method: 'post' do |f| %>
+		<%= f.text_area :description %>
+		<%= f.submit 'save To-Do' %>
+	<% end %>	
 </body>
 </html>
